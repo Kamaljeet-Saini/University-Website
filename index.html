@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="logo">ABOUT US</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="home.html" target="blank">HOME</a></li>
+            <li class="active"><a href="stats.html" target="blank">STATISTICS</a></li>
+            <li class="active"><a href="achievements.html" target="blank">ACHIEVEMENTS</a></li>
+            <li class="active"><a href="queries.html" target="blank">QUERIES</a></li>
+            <li class="active"><a href="contacts.html" target="blank">CONTACTS</a></li>
+        </ul>
+        <img src="menu-button.png" alt="menu-button" class="menu-btn">
+    </div>
+    <header>
+        <div class="header-content">
+            <h2>We Are So Excited To Have You Here!</h2>
+            <div class="line"></div>
+            <h1>KAMAL UNIVERSITY</h1>
+            <a href="" class="ctn">Learn More</a>
+        </div>
+    </header>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navlinks=document.querySelector('.nav-links');
+        menuBtn.addEventListener("click",()=>{
+            navlinks.classList.toggle("menu-btn");
+        })
+    </script>
+</body>
+</html>
