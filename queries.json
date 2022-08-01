@@ -1,0 +1,40 @@
+$(function(){
+    var $queryForm = $("#basic-form");
+    $validator.addMethod("noSpace",function(value,element){
+        return value == '' || value.trim().length != 0
+    },
+    "Spaces are not allowed");
+    if($queryForm.length){
+        $queryForm.validate({
+            rules: {
+                firstname: {
+                    required: true,
+                },
+                lastname: {
+                    required: true,
+                },
+                contact: {
+                    required: true
+                },
+                query: {
+                    required: true,
+                }
+            },
+            messages: {
+                firstname: {
+                    required: "Firstname is mandatory!",
+                    minlength: "Name has to be minimium 3 characters long!"
+                },
+                lastname: {
+                    required: "Lastname is mandatory!"
+                },
+                contact: {
+                    required: "Contact is mandatory!"
+                },
+                query: {
+                    required: "Subject is mandatory!"
+                }
+            }
+        });
+    }
+});

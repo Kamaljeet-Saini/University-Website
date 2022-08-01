@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Reviews</title>
+    <style>
+        *{
+            font-family:'Nunito',sans-serif;
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            text-transform:capitalize;
+        }
+        body{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding-bottom:70px;
+            background:rgb(0, 187, 255);
+        }
+        .container{
+            position:relative;
+            perspective:1000px;
+        }
+        .container .slide-container .slide{
+            border-radius:5px;
+            background:#fff;
+            box-shadow:0 5px 10px #3337;
+            width:500px;
+            margin:10px;
+            padding:20px;
+            position:relative;
+            transform-style:preserve-3d;
+            animation:slide .4s .linear ;
+        }
+        @keyframes slide{
+            0%{
+                transform:rotateX(180deg);
+            }
+        }
+        .container .slide-container .slide > *{
+            animation: slideContent .2s linear .4s backwards;
+
+        }
+        @keyframes slideContent{
+            0%{
+                opacity:0;
+                transform:scale(.5);
+            }
+        }
+        .container .slide-container .slide .icon{
+            position:absolute;
+            top:10px;
+            right:15px;
+            font-size:90px;
+            color:#3498db;
+        }
+        .container .slide-container .slide .user{
+            display:flex;
+            align-items:center;
+
+        }
+        .container .slide-container .slide img{
+            height:150px;
+            width:150px;
+            border-radius:50%;
+            object-fit:cover;
+            margin-right:10px;
+
+        }
+        .container .slide-container .slide .user .user-info h3{
+            color:#333;
+            font-size:15px;
+        }
+        .container .slide-container .slide .text{
+            color:#3498db;
+            font-size:15px;
+            padding-top:15px;
+            font-style:italic;
+        }
+        .container .slide-container{
+            display:none;
+        }
+        .container .slide-container.active{
+            display:block;
+        }
+        .container #next , 
+        .container #prev{
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            height:50px;
+            width:50px;
+            line-height:50px;
+            text-align:center;
+            font-size:20px;
+            background:#fff;
+            color:#333;
+            cursor:pointer;
+            border-radius:50%;
+            box-shadow:0 5px 10px #3337;
+        }
+        .container #next{
+            right:-70px;
+        }
+        .container #prev{
+            left:-70px;
+        }
+        .container #next:hover , 
+        .container #prev:hover{
+            background:#333;
+            color:#fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide-container active">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img1.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Mr.Sushant Singh</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">SDE at Google</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">College has all the facilities and infrastructure to carry out lab work and aany additional student projects of their interest. Libraries have vast collection of books not limited to studies but also related to general knowledge and leisure.</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img2.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Ms.Aditi Goyal</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">SDE at Flipkart</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Campus life is amazing with lush greenery all sides and the huge campus with many sports and other recreational facilities. They conduct technical, traditional and yearly fests which are much needed to refresh ourselves from the academics.</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img3.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Mr.Prashant</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">Post-graduate Student</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">I have chosen to pursue further studies so did not opt for placements. My fellow students who have opted have been placed successfully in MNC's with a good salary package. When it comes to placements there's a dedicated department and team who offer training to crack high paying jobs with ease.</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img4.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Mr.Sudanshu Singh</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">Undergraduate Student</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">I am an undergraduate in mechanical engineering and the quality of teaching is student-friendly where they have the liberty to chose their modules and the curriculum is also regularly updated to keep it at par with the latest real-world developments</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img5.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Ms.Shanaya Singh</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">Intern at Deloitte India</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">It costed around 1.5-2 lacs per annum including transportation which is nominal compared to other universities in the city. Comparing the infrastructure, facilities and the support college provides it's totally worth the fee.</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img6.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Mr.Sambhav Singh</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">SDE at ZScalar Associates</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Overall CMRIT is a well established college and is always fun to be in the campus. You get to learn many of the things other than the main stream because of the courses offered by the college</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img7.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Mr.Dhruv Sharma</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">Intern at Samsung</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Campus life is well balanced, There is a cultural fest that happens every year called CULTURA generally during the earlier days of the even sem, Ethnic day happens a few days before that. The auditorium of our college is extremely huge and is a place where several club activities take place.</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img8.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Mr.Vishal Singh</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">Intern at Amazon.</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">The placements have been exceptional. Several students got selected in Amazon last batch and the others have also been placed in good companies. The job opportunities provided cater to the growth of an individual and a variety of companies take part in placements.</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="reviews_page_photos/img9.jpg" alt="" width=40% height = 40%>
+                    <div class="user-info">
+                        <h3 style="font-size:20px;">Ms.Ananya Sharma</h3>
+                        <h4 style="font-size:13px;font-family:'Times New Roman', Times, serif">Undergraduate Student.</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">I have taken up Computer Science in the college. The teaching is very good. The teachers make sure the concepts are well explained and give proper guidance to anyone who is facing any trouble. Overall making us job-ready.</p>
+            </div>
+        </div>
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    </div>
+    <script>
+        let slides = document.querySelectorAll(".slide-container");
+        let index = 0;
+        function next(){
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        function prev(){
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -16,7 +16,10 @@
             box-sizing: border-box;
             resize: vertical;
         }
-
+        .error{ 
+            color:green;
+            font-style:italic;
+        }
         /* Style the label to display next to the inputs */
         label {
             padding: 12px 12px 12px 0;
@@ -73,26 +76,30 @@
             }
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    
+    <script src="queries.js"></script>
 </head>
 
 <body>
     <div><h1>HAVING ANY QUERIES?</h1></div>
     <div class="container">
-        <form>
+        <form id = "basic-form">
             <div class="row">
                 <div class="col-25">
-                    <label for="fname">Enter your First Name</label>
+                    <label for="name">Enter your Full Name</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="text" id="name" name="name" placeholder="Your name..">
                 </div>
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="lname">Enter your Last Name</label>
+                    <label for="email">Your email address</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <input type="email" name = "email" id="email" placeholder="Your email..">
                 </div>
             </div>
             <div class="row">
@@ -100,7 +107,7 @@
                     <label for="contact">Your contact number</label>
                 </div>
                 <div class="col-75">
-                    <input type="tel" name="contact" id="contact">
+                    <input type="tel" name="contact" id="contact" placeholder="Your contact">
                 </div>
             </div>
             <div class="row">
@@ -115,6 +122,7 @@
                 <input type="submit" value="Submit">
             </div>
         </form>
-    </div </body>
+    </div 
+</body>
 
 </html>

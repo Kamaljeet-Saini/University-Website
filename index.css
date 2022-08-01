@@ -22,7 +22,7 @@ a{
     font-weight:bolder;
     color:#fc036b;
     text-align:center;
-    margin-bottom:310px;
+    margin-bottom:50px;
 }
 .header-content h2{
     font-size:4vmin;
@@ -45,6 +45,8 @@ a{
     background:#fc036b;
     border-radius:30px;
     color:whitesmoke;
+    margin-top:10px;
+    margin-bottom:30px;
 }
 .navbar{
     position:absolute;

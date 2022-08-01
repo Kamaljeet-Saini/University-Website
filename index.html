@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>-->
+    <script>var exports = {};</script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script type = "module"src="https://cdn.jsdelivr.net/npm/javascript-cookies@1.0.5/build/cookie.min.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="navbar">
-        <h1 class="logo">ABOUT US</h1>
+        <h3 class="logo" style="text-decoration:underline"><a href="faq.html" target="blank">FAQs</a></h3>
         <ul class="nav-links">
             <li class="active"><a href="home.html" target="blank">HOME</a></li>
             <li class="active"><a href="stats.html" target="blank">STATISTICS</a></li>
-            <li class="active"><a href="achievements.html" target="blank">ACHIEVEMENTS</a></li>
+            <li class="active"><a href="achievements.html" target="blank">ACHIEVEMENTS </a></li>
             <li class="active"><a href="queries.html" target="blank">QUERIES</a></li>
             <li class="active"><a href="contacts.html" target="blank">CONTACTS</a></li>
         </ul>
@@ -24,7 +28,16 @@
             <h2>We Are So Excited To Have You Here!</h2>
             <div class="line"></div>
             <h1>KAMAL UNIVERSITY</h1>
-            <a href="" class="ctn">Learn More</a>
+            <a href="reviews2.html" class="ctn">Learn More</a>
+            <h3 style="margin-top:30px;font-size:25px;color:black">ENTER USERNAME</h3>
+            <input type="text" name="" id="username" style="margin-bottom:8px;width:25%;height:30%;justify-content:center;padding: 12px 15px;border: 2px solid pink;" placeholder="Enter your username">
+            <h3 style="margin-top:15px;font-size:25px;color:black">ENTER ROLL NUMBER</h3>
+            <input type="text" name="" id="roll" style="margin-bottom:8px;width:25%;height:30%;justify-content:center;padding: 12px 15px;border: 2px solid pink;" placeholder="Enter your Roll number">
+            <br>
+            <h3 style="margin-top:15px;font-size:25px;color:black">ENTER YEAR</h3>
+            <input type="text" name="" id="year" style="margin-bottom:8px;width:25%;height:30%;justify-content:center;padding: 12px 15px;border: 2px solid pink;" placeholder="Enter your Year">
+            <br>
+            <button class="ctn" style="margin-bottom:5px;width:150px" onclick="set_cookie_ls()">SUBMIT</button>
         </div>
     </header>
     <script>
@@ -33,6 +46,17 @@
         menuBtn.addEventListener("click",()=>{
             navlinks.classList.toggle("menu-btn");
         })
+        function set_cookie_ls(){
+            let cname = document.getElementById("username").value;
+            let cvalue = document.getElementById("roll").value;
+            let rollN = document.getElementById('roll').value;
+            /*const d = new Date();
+            d.setTime(d.getTime() + (365*24*60*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";    */
+            document.cookie = cname + "=" + cvalue; 
+            localStorage.setItem(cname,rollN);
+        }
     </script>
 </body>
 </html>

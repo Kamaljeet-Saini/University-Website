@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="faq.css">
+    <title>FAQs</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">
+            Frequently Asked Questions
+        </h1>
+        <main class="accordion">
+            <div class="faq-img">
+                <img src="faq.jpg" alt="" class="accordion-img">
+            </div>
+            <div class="content-accordion">
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            How do i locate a program that is right for me? 
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>       
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>Search by degree level: Undergraduate Programs, Master's Degree Programs, Doctorate Degree Programs, Teacher Certification Programs, Other Certificate Programs, and Online Programs
+                            Search by department</p>
+                    </div>
+                </div>
+                
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            How do i submit an application?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>       
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>General information on how to apply can be found here. To submit an application, you can access the school's online application system. After creating a user account, you may continually login to work on your application prior to officially submitting it for admission consideration.</p>
+                    </div>
+                </div>
+
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            How and when do i register for courses?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>       
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>Please read our Self-Enrollment Guide PDF for specific details on how to register. </p>
+                    </div>
+                </div>
+
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                           What are the maximium number of credits i can complete as a non-degree student?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>       
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>Non-degree students are eligible to complete up to 15 credits of coursework. A maximum of 15 credits completed as a non-degree student may be applied toward a certificate or degree program upon admission to the school as a degree-seeking student, subject to the approval of program faculty.</p>
+                    </div>
+                </div>
+
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            Where should i direct technology questions?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>       
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>Please visit Computing Services and Systems Development (CSSD), or contact the Help Desk at 412-624-HELP (412-624-4357).</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script>
+        const questions = document.querySelectorAll('.question-answer');
+        questions.forEach(function(question){
+            const btn = question.querySelector('.question-btn');
+            btn.addEventListener("click",function(){
+                questions.forEach(function(item){
+                    if(item != question){
+                        item.classList.remove("show-text");
+                    }
+                })
+                question.classList.toggle("show-text");
+            })
+        })
+    </script>
+</body>
+</html>
